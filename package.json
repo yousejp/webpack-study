@@ -1,54 +1,27 @@
 {
-  "name": "webpack-crash-course",
+  "name": "git",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "本リポジトリは、Udemyのプログラミングコース「モジュールバンドラーwebpackを1日で習得！しかもフルスクラッチでインストールからカスタマイズまでの手順を理解する」",
+  "main": "webpack.config.js",
   "scripts": {
-    "launch": "webpack-dev-server --open --mode production",
-    "start": "webpack-dev-server --open --mode development"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/DiveIntoHacking/webpack-crash-course.git"
+    "url": "git+https://github.com/yousejp/webpack-study.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/DiveIntoHacking/webpack-crash-course/issues"
+    "url": "https://github.com/yousejp/webpack-study/issues"
   },
-  "homepage": "https://github.com/DiveIntoHacking/webpack-crash-course#readme",
-  "devDependencies": {
-    "@babel/core": "^7.2.2",
-    "@babel/preset-env": "^7.3.1",
-    "@babel/preset-react": "^7.0.0",
-    "babel-eslint": "^10.0.1",
-    "babel-loader": "^8.0.5",
-    "css-loader": "^2.1.0",
-    "eslint": "^5.13.0",
-    "eslint-config-airbnb": "^17.1.0",
-    "eslint-loader": "^2.1.2",
-    "eslint-plugin-import": "^2.16.0",
-    "eslint-plugin-jsx-a11y": "^6.2.1",
-    "eslint-plugin-react": "^7.12.4",
-    "file-loader": "^3.0.1",
-    "html-loader": "^0.5.5",
-    "html-webpack-plugin": "^3.2.0",
-    "live-server": "^1.2.1",
-    "mini-css-extract-plugin": "^0.5.0",
-    "node-sass": "^4.11.0",
-    "optimize-css-assets-webpack-plugin": "^5.0.1",
-    "sass-loader": "^7.1.0",
-    "style-loader": "^0.23.1",
-    "uglifyjs-webpack-plugin": "^2.1.1",
-    "url-loader": "^1.1.2",
-    "webpack": "^4.29.0",
-    "webpack-cli": "^3.2.1",
-    "webpack-dev-server": "^3.1.14"
-  },
+  "homepage": "https://github.com/yousejp/webpack-study#readme",
   "dependencies": {
-    "lodash": "^4.17.11",
-    "react": "^16.8.1",
-    "react-dom": "^16.8.1"
+    "webpack": "^4.29.0"
+  },
+  "devDependencies": {
+    "live-server": "^1.2.1",
+    "webpack-cli": "^3.2.1"
   }
 }
