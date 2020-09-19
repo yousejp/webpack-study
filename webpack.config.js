@@ -14,6 +14,17 @@ module.exports = {
     filename: 'main.js',
     path: outputPath,
   },
+  module: {
+    rules: [
+      {
+        test: /\.css$/,
+        // \はoption + ¥で表示できる
+        use: ['style-loader', 'css-loader'],
+        // webpackではloaderが逆順に読み込まれる
+        // use: ['css-loader', 'style-loader']ではエラーになる
+      },
+    ],
+  },
   devServer: {
     contentBase: outputPath,
   },
