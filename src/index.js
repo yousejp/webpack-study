@@ -22,8 +22,9 @@ import Lion from './utilities';
 // defultでは{}がいらない、import後の名前も自由に設定できる
 
 // import style from './style.css';
-// 上記でも下記でも同じ機能が得られる（style fromを省略しても良い）
+//（style fromを省略しても良い）
 import './style.css';
+import './style.scss';
 
 import logo from './logo.png';
 

@@ -24,6 +24,10 @@ module.exports = {
         // use: ['css-loader', 'style-loader']ではエラーになる
       },
       {
+        test: /\.scss$/,
+        use: ['style-loader', 'css-loader', 'sass-loader'],
+      },
+      {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
         // (jpe?g | png |このように間隔を開けるとエラーになる
         loader: 'url-loader',
