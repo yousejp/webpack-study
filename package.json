@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/yousejp/webpack-study#readme",
   "dependencies": {
-    "webpack": "^4.29.0"
+    "lodash": "^4.17.20"
   },
   "devDependencies": {
+    "html-webpack-plugin": "^4.4.1",
     "live-server": "^1.2.1",
-    "webpack-cli": "^3.2.1"
+    "webpack": "^4.29.0",
+    "webpack-cli": "^3.3.12"
   }
 }
