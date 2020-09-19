@@ -25,6 +25,8 @@ import Lion from './utilities';
 // 上記でも下記でも同じ機能が得られる（style fromを省略しても良い）
 import './style.css';
 
+import logo from './logo.png';
+
 // テストコメント
 /* テストだよコメント
  */
@@ -56,4 +58,7 @@ function component() {
 document.body.appendChild(component());
 document.body.classList.add('haikei');
 
-console.log(style.toString());
+const image = new Image();
+image.src = logo;
+console.log(image);
+document.body.appendChild(image);

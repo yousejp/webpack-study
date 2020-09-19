@@ -23,6 +23,15 @@ module.exports = {
         // webpackではloaderが逆順に読み込まれる
         // use: ['css-loader', 'style-loader']ではエラーになる
       },
+      {
+        test: /\.(jpe?g|png|gif|svg|ico)$/i,
+        // (jpe?g | png |このように間隔を開けるとエラーになる
+        loader: 'url-loader',
+        options: {
+          limit: 2048,
+          name: './images/[name].[ext]',
+        },
+      },
     ],
   },
   devServer: {
