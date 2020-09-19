@@ -10,6 +10,17 @@
 
 import _ from 'lodash';
 
+import { NAME, NiJou } from './utilities';
+
+// import * as utilities from './utilities';
+// utilities.NAMEなどの書き方で使えるようになる
+
+// import { NAME as NAME_OF_HAM } from './utilities';
+// NAME_OF_HAMという名前に置き換えている
+
+import Lion from './utilities';
+// defultでは{}がいらない、import後の名前も自由に設定できる
+
 // テストコメント
 /* テストだよコメント
  */
@@ -18,6 +29,15 @@ import _ from 'lodash';
  @license
  ライセンスコメント
  */
+
+console.log(NiJou(2));
+console.log(NAME);
+
+// console.log(utilities.NiJou(10));
+// console.log(utilities.NAME);
+// console.log(NAME_OF_HAM);
+
+console.log(Lion.say());
 
 function component() {
   const element = document.createElement('div');
