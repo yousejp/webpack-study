@@ -1,5 +1,10 @@
-$primary-color: #FF5733;
+$primary-color: #ff5733;
+$test-color: #000080;
 
 div {
   color: $primary-color;
+}
+
+#root div {
+  color: $test-color;
 }
