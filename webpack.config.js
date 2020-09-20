@@ -1,5 +1,6 @@
 const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 const outputPath = path.resolve(__dirname, 'dist');
 // console.log({ outputPath });
@@ -17,16 +18,20 @@ module.exports = {
   },
   module: {
     rules: [
+      // scssはcssと互換性があるので(sc|c)というorの書き方ができる
+      // {
+      //   test: /\.css$/,
+      //   // \はoption + ¥で表示できる
+      //   // use: ['style-loader', 'css-loader'],
+      //   use: ['MiniCssExtractPlugin.loader', 'css-loader'],
+      //   // webpackではloaderが逆順に読み込まれる
+      //   // use: ['css-loader', 'style-loader']ではエラーになる
+      // },
       {
-        test: /\.css$/,
-        // \はoption + ¥で表示できる
-        use: ['style-loader', 'css-loader'],
-        // webpackではloaderが逆順に読み込まれる
-        // use: ['css-loader', 'style-loader']ではエラーになる
-      },
-      {
-        test: /\.scss$/,
-        use: ['style-loader', 'css-loader', 'sass-loader'],
+        test: /\.(sc|c)ss$/,
+        // use: ['style-loader', 'css-loader', 'sass-loader'],
+        use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader'],
+        // プラグインは''で囲わないように注意
       },
       {
         test: /\.(jpe?g|png|gif|svg|ico)$/i,
@@ -61,5 +66,9 @@ module.exports = {
       template: './src/index.html',
       filename: './index.html',
     }),
+    new MiniCssExtractPlugin({
+      filename: '[name].[hash].css',
+    }),
+    // [hash]はキャッシュにかからないために使用
   ],
 };
