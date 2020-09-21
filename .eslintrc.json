@@ -1,10 +1,26 @@
 {
   "env": {
-    "browser": true
+    "browser": true,
+    "es2021": true
   },
-	"extends": "airbnb",
-	"parser": "babel-eslint",
-	"rules": {
-		"react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
-	}
+  "extends": ["plugin:react/recommended", "google"],
+  "parser": "babel-eslint",
+  "parserOptions": {
+    "ecmaFeatures": {
+      "jsx": true
+    },
+    "ecmaVersion": 12,
+    "sourceType": "module"
+  },
+  "plugins": ["react"],
+  "rules": {
+    "require-jsdoc": 0,
+    "valid-jsdoc": 0
+    // 上記二つを記載しないと関数にコメントをつけてくださいとエラーが出る
+  },
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  }
 }

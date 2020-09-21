@@ -7,7 +7,7 @@ ReactDOM.render(<div>Hello, React!</div>, document.getElementById('root'));
 
 import _ from 'lodash';
 
-import { NAME, NiJou } from './utilities';
+import {NAME, nijou} from './utilities';
 
 // import * as utilities from './utilities';
 // utilities.NAMEなどの書き方で使えるようになる
@@ -19,22 +19,24 @@ import Lion from './utilities';
 // defultでは{}がいらない、import後の名前も自由に設定できる
 
 // import style from './style.css';
-//（style fromを省略しても良い）
+// （style fromを省略しても良い）
 import './style.css';
 import './style.scss';
 
 import logo from './logo.png';
 
+// alert('Hi, alert!');
+
 // テストコメント
 /* テストだよコメント
  */
 
-/* 
+/*
  @license
  ライセンスコメント
  */
 
-console.log(NiJou(2));
+console.log(nijou(2));
 console.log(NAME);
 
 // console.log(utilities.NiJou(10));
@@ -43,12 +45,14 @@ console.log(NAME);
 
 console.log(Lion.say());
 
+/**
+ * It returns element
+ */
 function component() {
   const element = document.createElement('div');
   const array = ['Hello', 'webpack', '!!'];
   element.innerHTML = _.join(array, ' ');
-  /* テスト2コメント
-   */
+
   console.log('コンソール');
   return element;
 }

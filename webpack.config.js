@@ -7,7 +7,7 @@ const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
 const outputPath = path.resolve(__dirname, 'dist');
 // console.log({ outputPath });
 
-/* 
+/*
 npx webpack --config (ディレクトリとファイル名)webpack.config.js
 上記でwebpackの設定ファイルを明示的に指定できる
 */
@@ -45,7 +45,14 @@ module.exports = {
         },
       },
       {
-        test: /\.m?jsx?$/,
+        enforce: 'pre',
+        // enforceは実行順序の指定、preで他のトランスパイル前に実行される
+        test: /\.jsx?$/,
+        exclude: /node_modules/,
+        loader: 'eslint-loader',
+      },
+      {
+        test: /\.jsx?$/,
         exclude: /node_modules/,
         use: {
           loader: 'babel-loader',
@@ -85,4 +92,5 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({}),
     ],
   },
+  devtool: 'eval-source-map',
 };
